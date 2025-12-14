@@ -21,6 +21,10 @@ const productSchema = new mongoose.Schema({
         required: [true, "Product stock is required"],
         min: [0, "Stock cannot be negative"],
     },
+    images: {
+        type: [String],
+        default: [],
+    },
     categoryId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Category",
